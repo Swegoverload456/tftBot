@@ -4,12 +4,12 @@ import time
 import keyboard
 import random
 import win32api, win32con
-a=0
+
 while 1:
 
-    file1 = open('data.txt', 'w')
+
     if pyautogui.locateOnScreen('shopImages/Jhin.PNG') is not None:
-        a=1
+        file1 = open('data/data.txt', 'w')
         print("I can see it")
 
         L = ["juan is a hoe \n", "break offff \n", "pussy \n"]
@@ -27,15 +27,14 @@ while 1:
 
         # Checking if the data is
         # written to file or not
-        file1 = open('data.txt', 'r')
+        file1 = open('data/data.txt', 'r')
         print(file1.read())
         file1.close()
         time.sleep(0.5)
     else:
-        a=2
+        file1 = open('data/data.txt', 'w')
         print("I am unable to see it")
         time.sleep(0.5)
         s = "none"
-        file1.writelines(s)
+        file1.write(s)
         file1.close()
-    file1.write(str(a))

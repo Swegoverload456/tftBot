@@ -11,12 +11,9 @@ while 1:
     if pyautogui.locateOnScreen('shopImages/Jhin.PNG') is not None:
         file1 = open('data/data.txt', 'w')
         print("I can see it")
-
-        L = ["juan is a hoe \n", "break offff \n", "pussy \n"]
-        s = "Hello\n"
-
-        # Writing a string to file
-        file1.write(s)
+        list = ["none\n", "none\n", "none\n", "none\n", "none\n"]
+        list[0]="jhin\n"
+        L = [list[0],list[1],list[2],list[3],list[4]]
 
         # Writing multiple strings
         # at a time
@@ -32,9 +29,11 @@ while 1:
         file1.close()
         time.sleep(0.5)
     else:
+        list = ["none\n", "none\n", "none\n", "none\n", "none\n"]
+        list[0] = "jhin\n"
+        L = [list[0],list[1],list[2],list[3],list[4]]
         file1 = open('data/data.txt', 'w')
         print("I am unable to see it")
         time.sleep(0.5)
-        s = "none"
-        file1.write(s)
+        file1.writelines(L)
         file1.close()

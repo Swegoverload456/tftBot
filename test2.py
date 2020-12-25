@@ -5,35 +5,12 @@ import keyboard
 import random
 import win32api, win32con
 
-while 1:
-
-
-    if pyautogui.locateOnScreen('shopImages/Jhin.PNG') is not None:
-        file1 = open('data/data.txt', 'w')
-        print("I can see it")
-        list = ["none\n", "none\n", "none\n", "none\n", "none\n"]
-        list[0]="jhin\n"
-        L = [list[0],list[1],list[2],list[3],list[4]]
-
-        # Writing multiple strings
-        # at a time
-        file1.writelines(L)
-
-        # Closing file
-        file1.close()
-
-        # Checking if the data is
-        # written to file or not
-        file1 = open('data/data.txt', 'r')
-        print(file1.read())
-        file1.close()
-        time.sleep(0.5)
-    else:
-        list = ["none\n", "none\n", "none\n", "none\n", "none\n"]
-        list[0] = "jhin\n"
-        L = [list[0],list[1],list[2],list[3],list[4]]
-        file1 = open('data/data.txt', 'w')
-        print("I am unable to see it")
-        time.sleep(0.5)
-        file1.writelines(L)
-        file1.close()
+#coords for shop
+#champ slot 1: x = 561, y = 951, w = 86, h = 14
+#champ slot 2: x = 728, y = 951, w = 86, h = 14
+#champ slot 3: x = 896, y = 951, w = 86, h = 14
+#champ slot 4: x = 1064, y = 951, w = 86, h = 14
+#champ slot 5: x = 1232, y = 951, w = 86, h = 14
+time.sleep(0.75)
+location = pyautogui.locateOnScreen('shopImages/Lulu.png', region=(561, 951, 86, 14), confidence=0.7)
+print(location)
